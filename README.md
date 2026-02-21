@@ -1,43 +1,14 @@
-# Site Pessoal – Davi Braga
+# Davi Braga
 
-Site pessoal para portfólio e LinkedIn, inspirado no estilo [lasinskas-me](https://lasinskas-me.vercel.app/projects/).
+Site pessoal e portfólio.
 
-## O que tem
+**Davi Braga Moreira** · Business Analyst em Core Limit Policies (Excellence) · foco em políticas de limite de cartão, métricas e experimentos de crédito (BR/MX/COL).
 
-- **Início** – apresentação rápida
-- **Work** – página “Lugares que trabalhei” com cards de experiência (Nubank, Flash, Conta Simples como exemplo)
-- **About** – página sobre você (para editar)
+- **Experiência** – Nubank (Core Limit Policies), Flash, Discover, Conta Simples, AIESEC, entre outras.
+- **Formação** – Sistemas de Informação (UNIFEI); pós em andamento: Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA Aplicada (EAD).
+- **TCC** – *Uma Introdução ao Leilão da Mochila* (Teoria dos Jogos, Design de Mecanismos, UNIFEI).
+- **Competências** – crédito e política, dados e experimentos, visualização e monitoria, IA e engenharia de software, negócio e comunicação (PT e EN).
+- **Projetos** – experiência em Core Limit Policies, projetos pessoais e materiais de estudo.
 
-## Como editar seus dados
-
-1. **Experiências (Work)**  
-   Edite o arquivo `src/data/experience.ts`. Cada item tem:
-   - `company`, `role`, `description`, `period`
-   - `tags` (ex: SQL, Python, Data Analyst)
-   - `highlights` (lista de conquistas em tópicos)
-
-2. **Texto da home**  
-   Edite `src/app/page.tsx` (nome e frase de apresentação).
-
-3. **About**  
-   Edite `src/app/about/page.tsx` e coloque sua bio e links (LinkedIn, GitHub, etc.).
-
-4. **Logo das empresas (opcional)**  
-   Coloque imagens em `public/` (ex: `public/nubank.png`) e no `experience.ts` use `logo: "/nubank.png"` no item. Depois podemos ajustar o componente para exibir a imagem.
-
-## Rodar localmente
-
-```bash
-cd davi-braga-site
-npm install
-npm run dev
-```
-
-Abre [http://localhost:3000](http://localhost:3000).
-
-## Deploy na Vercel
-
-1. Crie um repositório no GitHub e suba este projeto.
-2. Acesse [vercel.com](https://vercel.com), faça login e “Import Project”.
-3. Conecte o repositório; a Vercel detecta Next.js e faz o deploy.
-4. Depois do deploy, use o link do site no seu LinkedIn (ex: “Website” no perfil).
+Apaixonado por análise de dados e números; extrovertido e conversador.  
+Nascido em Varginha, moro em São Paulo.
