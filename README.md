@@ -2,6 +2,8 @@
 
 Site pessoal e portfólio.
 
+**Site no ar:** [meu-portfolio-site (Vercel)](https://vercel.com/davibraga0809-6913s-projects/meu-portfolio-site)
+
 **Davi Braga Moreira** · Business Analyst em Core Limit Policies (Excellence) · foco em políticas de limite de cartão, métricas e experimentos de crédito (BR/MX/COL).
 
 - **Experiência** – Nubank (Core Limit Policies), Flash, Discover, Conta Simples, AIESEC, entre outras.
