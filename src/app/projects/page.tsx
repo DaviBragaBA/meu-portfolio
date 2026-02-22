@@ -3,7 +3,8 @@ import { ExperienceCard } from "@/components/ExperienceCard";
 
 export const metadata = {
   title: "Work | Davi Braga",
-  description: "Lugares que trabalhei",
+  description:
+    "Experiência profissional de Davi Braga: Nubank (Core Limit Policies), Flash, Discover, Conta Simples e mais. Business Analyst em políticas de limite de cartão, métricas e experimentos.",
 };
 
 export default function ProjectsPage() {

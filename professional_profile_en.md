@@ -41,14 +41,13 @@ I work heavily in Databricks and in data jobs repositories to create and maintai
 
 Budget monitoring for limit increase experiments, aggregated by:
 
-- business month (calendar month),
-- customer cohort,
+- business month,
 - risk band,
 - policy and policy version.
 
 In these jobs, I:
 
-- write Spark transformations to join limit data, customer behavior and experiment group labels;
+- write transformations to join limit data, customer behavior and experiment group labels;
 - compute deltas between test and control for purchase volume, interest‑bearing balance, outstanding balance and limit;
 - generate ready‑to‑use tables for dashboards and monitoring.
 
@@ -56,7 +55,7 @@ Before any change goes to production, I run staging executions in our data orche
 
 ### 3. Creating dashboards and visual narratives
 
-I use Momo‑CLP as the main visualization tool for Core Limit Policies. For example, I created the "Core Limit Policies → Budget Metrics → BR / MX" area to concentrate budget and performance dashboards.
+I use internal dashboards as the main visualization tool for policy and budget monitoring, creating and evolving areas that concentrate budget and performance views by country.
 
 In these dashboards I:
 
@@ -76,7 +75,7 @@ These dashboards are the basis for:
 
 ### 4. Bringing changes into the production policy
 
-When data shows that a policy change makes sense, I help implement it in the central policy and data repository (mainly Itaipu).
+When data shows that a policy change makes sense, I help implement it in the central policy and data repository.
 
 Typical changes I work on include:
 
@@ -100,7 +99,7 @@ I use extensively:
   - document revenue components (interchange, interest, late fee, FX, etc.) and cost components (losses, capital, funding),
   - record experiment learnings, policy decisions and caps/blocks reviews.
 - **Slack** to discuss technical questions and align with engineers, data scientists, other analysts and country teams.
-- **Glean** as a unified search layer across documents, PRs, Slack conversations, dashboards and metric definitions.
+- **Internal search** as a unified layer across documents, PRs, conversations, dashboards and metric definitions.
 
 I also continuously study:
 
@@ -112,11 +111,11 @@ I also continuously study:
 ## Tools I use daily
 
 - **Databricks** – exploring data, validating monitoring datasets, testing calculation logic and understanding metric behavior.
-- **Data jobs repositories** – especially core-limit-policies-monitoring-data-jobs, where I create and maintain monitoring pipelines for budget by country, cohort and risk band.
-- **Momo‑CLP** – building dashboards and visual reports for Core Limit Policies and budget metrics.
-- **Itaipu** – implementing changes in blocks and policy input datasets used by the limit policy in production.
+- **Data jobs repositories** – where I create and maintain monitoring pipelines for budget by country and risk band.
+- **Internal dashboards** – building visual reports for policy and budget metrics.
+- **Policy and data repository** – implementing changes in blocks and policy input datasets used by the limit policy in production.
 - **Job orchestration and monitoring tools** – running and tracking staging and production data jobs.
 - **GitHub** – opening, reviewing and tracking Pull Requests related to policy, monitoring and dashboards.
 - **Confluence, Google Docs and Google Slides** – documenting policies, models, projects and decisions.
 - **Slack** – daily communication with technical and business teams.
-- **Glean** – fast search across internal knowledge (docs, code, Slack, dashboards, metrics).
+- **Internal search** – fast search across internal knowledge (docs, code, dashboards, metrics).

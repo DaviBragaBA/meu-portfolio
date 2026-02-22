@@ -16,18 +16,17 @@ export const personal = {
   idiomas: "Inglês intermediário/avançado",
   idiomasEn: "Intermediate/advanced English",
   formacaoEmUmaLinha:
-    "Formado em Sistemas de Informação (UNIFEI). Pós em andamento: Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA Aplicada (EAD).",
+    "Formado em Sistemas de Informação (UNIFEI). Pós em andamento: Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA.",
   formacaoEmUmaLinhaEn:
-    "Degree in Information Systems (UNIFEI). In progress: Business Data Intelligence (ESPM) and Software Engineering in Applied AI (EAD).",
+    "Degree in Information Systems (UNIFEI). In progress: Business Data Intelligence (ESPM) and Software Engineering in AI.",
   motivacao:
-    "O que mais me motiva é o desconforto: acredito que crescemos quando saímos da zona de conforto, encaramos desafios e aprendemos com o que ainda não dominamos. Gosto de ambientes que exigem adaptação, aprendizado contínuo e entrega com propósito.",
+    "Gosto de ambientes que exigem adaptação e aprendizado contínuo. Busco trabalhar em problemas que ainda não domino — acho que é onde mais aprendo.",
   motivacaoEn:
-    "What motivates me most is discomfort: I believe we grow when we leave our comfort zone, face challenges and learn from what we don’t yet master. I like environments that demand adaptation, continuous learning and purpose-driven delivery.",
-  /** Traços de personalidade / o que te define (ex.: paixão por dados, perfil comunicativo). */
+    "I like environments that demand adaptation and continuous learning. I prefer working on problems I don’t yet master — that’s where I learn the most.",
   personalidade:
-    "Apaixonado por análise de dados e números; extrovertido e conversador.",
+    "Interesse em análise de dados e números; extrovertido e conversador.",
   personalidadeEn:
-    "Passionate about data analysis and numbers; extroverted and conversational.",
+    "Interest in data analysis and numbers; extroverted and conversational.",
 };
 
 /** Retorna a idade atual (aniversário em ago/set = soma 1 nesses meses). */

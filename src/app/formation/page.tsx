@@ -3,7 +3,8 @@ import { EducationCard } from "@/components/EducationCard";
 
 export const metadata = {
   title: "Formação | Davi Braga",
-  description: "Formação acadêmica e cursos",
+  description:
+    "Formação acadêmica de Davi Braga: graduação em Sistemas de Informação (UNIFEI), pós em Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA.",
 };
 
 export default function FormationPage() {
@@ -18,19 +19,6 @@ export default function FormationPage() {
           <EducationCard key={item.id} item={item} />
         ))}
       </div>
-
-      <section className="pt-8 border-t border-[var(--border)]">
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-4">
-          Cursos e aprendizado
-        </h2>
-        <p className="text-[var(--muted)] text-sm leading-relaxed">
-          Cursos e materiais de estatística, <span className="text-[var(--accent)] font-medium">SQL</span>, <span className="text-[var(--accent)] font-medium">experimentos</span> (A/B testing),
-          causalidade, <span className="text-[var(--accent)] font-medium">crédito</span> e <span className="text-[var(--accent)] font-medium">risco</span> — internos (Nubank) ou externos — que
-          você concluiu ou está fazendo podem ser listados aqui. Ex.: treinamentos
-          de <span className="text-[var(--accent)] font-medium">métricas de cartão</span>, documentação de modelos de risco, materiais de causal
-          inference.
-        </p>
-      </section>
     </div>
   );
 }

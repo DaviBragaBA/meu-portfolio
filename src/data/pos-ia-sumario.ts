@@ -11,7 +11,7 @@ export const modulosPosIA: ModuloPosIA[] = [
     titulo: "Ambientação",
     cargaHoraria: 0,
     descricao:
-      "Ensino a distância: características desta modalidade de estudo. A tecnologia e o ensino à distância. Legislação do Ensino a Distância no Brasil. Aspectos relacionados ao perfil no Ensino a Distância. Conteúdos: Introdução ao EAD; Tecnologia e educação; Legislação do EAD no Brasil; Perfil do aluno no Ensino a Distância.",
+      "Ensino a distância: características desta modalidade de estudo. A tecnologia e o ensino à distância. Legislação do Ensino a Distância no Brasil. Aspectos relacionados ao perfil no Ensino a Distância. Conteúdos: Introdução ao ensino a distância; Tecnologia e educação; Legislação do ensino a distância no Brasil; Perfil do aluno no Ensino a Distância.",
   },
   {
     id: "fundamentos-ia-llms",
@@ -88,14 +88,14 @@ export const modulosPosIA: ModuloPosIA[] = [
     titulo: "Projeto Integrador – Capstone Project",
     cargaHoraria: 30,
     descricao:
-      "Desenvolvimento de um projeto integrador que consolida os conhecimentos da pós em Engenharia de Software em IA Aplicada. Projetar, implementar e documentar uma solução completa baseada em IA, aplicando engenharia de software, arquitetura AI-first, MCP, RAG e integração full-stack. Definição do problema, planejamento técnico, prototipagem, versionamento, testes, implantação e defesa técnica perante banca. Conteúdos: Planejamento e definição do problema; Desenvolvimento de microsaas com IA integrada; Aplicação de MCP, RAG e agentes orquestrados; Defesa técnica e documentação do projeto.",
+      "Desenvolvimento de um projeto integrador que consolida os conhecimentos da pós em Engenharia de Software em IA. Projetar, implementar e documentar uma solução completa baseada em IA, aplicando engenharia de software, arquitetura AI-first, MCP, RAG e integração full-stack. Definição do problema, planejamento técnico, prototipagem, versionamento, testes, implantação e defesa técnica perante banca. Conteúdos: Planejamento e definição do problema; Desenvolvimento de microsaas com IA integrada; Aplicação de MCP, RAG e agentes orquestrados; Defesa técnica e documentação do projeto.",
   },
   {
     id: "carreira-entrevistas",
-    titulo: "Carreira e Entrevistas para Engenheiros de IA Aplicada",
+    titulo: "Carreira e Entrevistas para Engenheiros de IA",
     cargaHoraria: 30,
     descricao:
-      "Competências profissionais para atuação no mercado de Engenharia de Software e IA Aplicada. Posicionamento estratégico, criação e otimização de perfis em LinkedIn e GitHub, portfólios e projetos demonstráveis. System design para entrevistas técnicas, problem solving, live coding, comunicação técnica, storytelling e negociação salarial. Projeção de carreira, progressão por níveis (Júnior a Principal) e planejamento no ecossistema global de IA. Conteúdos: Branding e posicionamento profissional em IA; Portfólio técnico e presença digital; Preparação para entrevistas técnicas e system design; Planejamento de carreira e negociação salarial.",
+      "Competências profissionais para atuação no mercado de Engenharia de Software e IA. Posicionamento estratégico, criação e otimização de perfis em LinkedIn e GitHub, portfólios e projetos demonstráveis. System design para entrevistas técnicas, problem solving, live coding, comunicação técnica, storytelling e negociação salarial. Projeção de carreira, progressão por níveis (Júnior a Principal) e planejamento no ecossistema global de IA. Conteúdos: Branding e posicionamento profissional em IA; Portfólio técnico e presença digital; Preparação para entrevistas técnicas e system design; Planejamento de carreira e negociação salarial.",
   },
   {
     id: "industria-4",

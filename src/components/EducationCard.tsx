@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Education } from "@/data/education";
 import { HighlightKeywords } from "@/components/HighlightKeywords";
 import { TagWithTooltip } from "@/components/TagWithTooltip";
+import { PosProgressBar } from "@/components/PosProgressBar";
 
 const KEYWORDS = [
   "dados",
@@ -26,7 +27,6 @@ const KEYWORDS = [
   "data driven",
   "jornada analítica",
   "Capstone Project",
-  "EAD",
 ];
 
 type Props = { item: Education };
@@ -42,7 +42,12 @@ export function EducationCard({ item }: Props) {
         <div className="flex-1 min-w-0">
           <h2 className="text-xl font-semibold">{item.institution}</h2>
           <p className="text-[var(--accent)] font-medium mt-0.5">{item.degree}</p>
-          <p className="text-sm text-[var(--muted)] mt-1">{item.period}</p>
+          <div className="mt-1 flex flex-wrap items-center gap-3">
+            <p className="text-sm text-[var(--muted)]">{item.period}</p>
+            {item.startDate && item.endDate && (
+              <PosProgressBar startDate={item.startDate} endDate={item.endDate} />
+            )}
+          </div>
 
           {item.description && (
             <p className="mt-3 text-[var(--muted)] text-sm leading-relaxed">

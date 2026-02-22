@@ -5,7 +5,6 @@ import { TagWithTooltip } from "@/components/TagWithTooltip";
 const KEYWORDS = [
   "métricas de cartão",
   "Databricks",
-  "Spark",
   "SQL",
   "experimentos",
   "dashboards",

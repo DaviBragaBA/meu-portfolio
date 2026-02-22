@@ -2,7 +2,8 @@ import { skillCategories } from "@/data/skills";
 
 export const metadata = {
   title: "Competências | Davi Braga",
-  description: "Competências e habilidades",
+  description:
+    "Competências de Davi Braga: crédito e política, dados e experimentos A/B, Databricks, SQL, dashboards, visualização, IA e engenharia de software.",
 };
 
 export default function SkillsPage() {

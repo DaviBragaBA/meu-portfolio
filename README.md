@@ -7,7 +7,7 @@ Site pessoal e portfólio.
 **Davi Braga Moreira** · Business Analyst em Core Limit Policies (Excellence) · foco em políticas de limite de cartão, métricas e experimentos de crédito (BR/MX/COL).
 
 - **Experiência** – Nubank (Core Limit Policies), Flash, Discover, Conta Simples, AIESEC, entre outras.
-- **Formação** – Sistemas de Informação (UNIFEI); pós em andamento: Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA Aplicada (EAD).
+- **Formação** – Sistemas de Informação (UNIFEI); pós em andamento: Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA.
 - **TCC** – *Uma Introdução ao Leilão da Mochila* (Teoria dos Jogos, Design de Mecanismos, UNIFEI).
 - **Competências** – crédito e política, dados e experimentos, visualização e monitoria, IA e engenharia de software, negócio e comunicação (PT e EN).
 - **Projetos** – experiência em Core Limit Policies, projetos pessoais e materiais de estudo.

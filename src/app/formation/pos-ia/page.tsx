@@ -3,9 +3,9 @@ import { PosIASumarioAccordion } from "@/components/PosIASumarioAccordion";
 import { modulosPosIA } from "@/data/pos-ia-sumario";
 
 export const metadata = {
-  title: "Pós Engenharia de Software em IA Aplicada – Programa | Davi Braga",
+  title: "Pós Engenharia de Software em IA – Programa | Davi Braga",
   description:
-    "Programa completo da Pós-Graduação em Engenharia de Software em IA Aplicada (EAD): matriz curricular, 480h, disciplinas em LLMs, agentes, MCP, RAG, MLOps e governança em IA.",
+    "Programa completo da Pós-Graduação em Engenharia de Software em IA: matriz curricular, 480h, disciplinas em LLMs, agentes, MCP, RAG, MLOps e governança em IA.",
 };
 
 export default function FormationPosIAPage() {
@@ -19,10 +19,10 @@ export default function FormationPosIAPage() {
 
       <header className="border-b border-[var(--border)] pb-10">
         <p className="text-sm font-medium text-[var(--accent)] uppercase tracking-wider">
-          Pós-Graduação Lato Sensu (EAD)
+          Pós-Graduação Lato Sensu
         </p>
         <h1 className="text-2xl sm:text-4xl font-semibold tracking-tight mt-1">
-          Engenharia de Software em IA Aplicada
+          Engenharia de Software em IA
         </h1>
         <p className="text-[var(--muted)] mt-4 max-w-2xl leading-relaxed">
           Especialização na integração entre Engenharia de Software e
@@ -44,7 +44,7 @@ export default function FormationPosIAPage() {
             </h3>
             <p>
               Formar especialistas na integração entre Engenharia de Software e
-              IA Aplicada, capazes de projetar, desenvolver e implementar
+              IA, capazes de projetar, desenvolver e implementar
               soluções inteligentes com LLMs, agentes autônomos e pipelines de
               ML; com domínio de ferramentas de IA generativa, DevOps
               inteligente, governança algorítmica e práticas seguras e éticas.

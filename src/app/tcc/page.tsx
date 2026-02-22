@@ -23,7 +23,7 @@ const tccDestaques = [
 
 export const metadata = {
   title: "TCC | Davi Braga",
-  description: `Trabalho de Conclusão de Curso – ${tcc.title}. ${tcc.institution}, ${tcc.course}, ${tcc.year}.`,
+  description: `Trabalho de Conclusão de Curso – ${tcc.title}. Teoria dos Jogos, Design de Mecanismos, problema da mochila. ${tcc.institution}, ${tcc.course}, ${tcc.year}.`,
 };
 
 export default function TCCPage() {
@@ -50,8 +50,21 @@ export default function TCCPage() {
             tcc.title
           )}
         </h1>
+        {"emUmaFrase" in tcc && tcc.emUmaFrase && (
+          <p className="mt-4 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
+            {(tcc.emUmaFrase as string).split(/(\*[^*]+\*)/g).map((part, i) =>
+              part.startsWith("*") && part.endsWith("*") ? (
+                <em key={i} className="text-[var(--text)] font-medium">
+                  {part.slice(1, -1)}
+                </em>
+              ) : (
+                <span key={i}>{part}</span>
+              )
+            )}
+          </p>
+        )}
         {tcc.subtitle && (
-          <p className="mt-2 text-[var(--muted)]">
+          <p className="mt-4 text-sm text-[var(--muted)]">
             {tcc.subtitle}
           </p>
         )}

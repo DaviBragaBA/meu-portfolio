@@ -3,14 +3,19 @@ import Link from "next/link";
 import { personal } from "@/data/personal";
 import { Age } from "@/components/Age";
 import { HighlightPhrases } from "@/components/HighlightPhrases";
+import { HeroCountUp } from "@/components/HeroCountUp";
+import { ProjectsCountUp } from "@/components/ProjectsCountUp";
+import { PosProgressBar } from "@/components/PosProgressBar";
+import { projects } from "@/data/projects";
+import { education } from "@/data/education";
+import { agora } from "@/data/site";
 
 const formacaoDestaques = [
-  "Engenharia de Software em IA Aplicada",
+  "Engenharia de Software em IA",
   "Inteligência de Dados em Negócios",
   "Sistemas de Informação",
   "UNIFEI",
   "ESPM",
-  "EAD",
 ];
 
 export const metadata: Metadata = {
@@ -34,6 +39,29 @@ export default function Home() {
         <p className="text-[var(--muted)] max-w-xl">
           Banco digital · Cartões de crédito · Limites e políticas · <span className="text-[var(--accent)] font-medium">Pipelines</span> de dados · <span className="text-[var(--accent)] font-medium">Dashboards</span> de monitoria
         </p>
+        <p className="text-sm text-[var(--muted)]">
+          Atuação em <HeroCountUp /> · <ProjectsCountUp target={projects.length} />
+        </p>
+        {agora ? (
+          <p className="text-sm text-[var(--muted)] italic">
+            Agora: {agora}
+          </p>
+        ) : null}
+        <div className="space-y-2">
+          <p className="text-sm font-medium text-[var(--muted)]">Pós em andamento</p>
+          <div className="flex flex-col gap-2 text-sm">
+            {education
+              .filter((e) => e.startDate && e.endDate)
+              .map((e) => (
+              <div key={e.id} className="flex flex-wrap items-center gap-2">
+                <span className="text-[var(--muted)] shrink-0 min-w-[120px] sm:min-w-[140px]">
+                  {e.degree}
+                </span>
+                <PosProgressBar startDate={e.startDate!} endDate={e.endDate!} />
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="pt-4 flex flex-wrap gap-6">
           <Link
             href="/projects"
@@ -85,24 +113,33 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-3 flex-shrink-0 w-32 sm:w-40">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--border)]/20">
-              <img
-                src="/fotos/davi-cachorro.jpeg"
-                alt="Davi Braga e cachorro"
-                className="w-full h-full object-cover"
-              />
+          <div className="flex flex-row gap-2 sm:gap-3 flex-shrink-0 items-start">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <div className="w-24 h-24 sm:w-40 sm:h-40 rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--border)]/20 flex-shrink-0">
+                <img
+                  src="/fotos/davi-cachorro.jpeg"
+                  alt="Davi Braga e cachorro"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-sm text-[var(--muted)] italic">
+                Esse sou eu.
+              </p>
             </div>
-            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--border)]/20">
-              <img
-                src="/fotos/cachorro.jpeg"
-                alt="Banguela, meu cachorro"
-                className="w-full h-full object-cover"
-              />
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <div className="w-24 h-24 sm:w-40 sm:h-40 rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--border)]/20 flex-shrink-0">
+                <img
+                  src="/fotos/cachorro.jpeg"
+                  alt="Banguela, meu cachorro"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-sm text-[var(--muted)] italic">
+                Esse é o Banguela,
+                <br />
+                meu fiel companheiro.
+              </p>
             </div>
-            <p className="text-sm text-[var(--muted)] italic">
-              Curiosidade: Esse é o Banguela.
-            </p>
           </div>
         </div>
       </section>
@@ -113,10 +150,10 @@ export default function Home() {
           Sou <strong className="text-[var(--text)]">Business Analyst em <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence)</strong>, focado em políticas de limite de cartão de crédito em múltiplos países. No dia a dia, conecto <span className="text-[var(--accent)] font-medium">dados</span>, modelos de risco/receita e produto para desenhar, testar e monitorar políticas de aumento de limite com base em todas as métricas que envolvem cartão de crédito.
         </p>
         <p>
-          Trabalho com <span className="text-[var(--accent)] font-medium">experimentos</span> de limite (teste vs controle), analisando impacto em volume de compras, saldo médio diário que rende juros, saldo em aberto e risco. A partir disso, ajudo a ajustar caps, blocks e regras de elegibilidade, sempre olhando para o trade-off entre receita, perdas, capital e exposição.
+          Trabalho com <span className="text-[var(--accent)] font-medium">experimentos</span> de limite (teste vs. controle), analisando impacto em volume de compras, saldo médio diário que rende juros, saldo em aberto e risco. A partir disso, ajudo a ajustar caps, blocks e regras de elegibilidade, sempre olhando para o trade-off entre receita, perdas, capital e exposição.
         </p>
         <p>
-          Construo pipelines de monitoria em <span className="text-[var(--accent)] font-medium">Databricks/Spark</span>, crio <span className="text-[var(--accent)] font-medium">dashboards</span> internos de budget e policy performance e participo da implementação de mudanças na política em produção (por exemplo, regras de bloqueio ligadas à conformidade bancária). Meu objetivo é tornar as decisões de limite mais precisas, seguras e rentáveis, usando dados de forma estruturada e transparente.
+          Construo pipelines de monitoria em <span className="text-[var(--accent)] font-medium">Databricks</span>, crio <span className="text-[var(--accent)] font-medium">dashboards</span> internos de budget e policy performance e participo da implementação de mudanças na política em produção (por exemplo, regras de bloqueio ligadas à conformidade bancária).
         </p>
       </div>
 
@@ -127,7 +164,7 @@ export default function Home() {
           English
         </p>
         <p>
-          I’m a <strong className="text-[var(--text)]">Business Analyst in <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence)</strong>, focused on credit card limit policies in multiple countries. I connect <span className="text-[var(--accent)] font-medium">data</span>, risk/revenue models, and product to design, test, and monitor limit-increase policies based on the full set of metrics that involve credit card. I work with limit <span className="text-[var(--accent)] font-medium">experiments</span> (test vs control), adjust caps, blocks, and eligibility rules, build monitoring pipelines in <span className="text-[var(--accent)] font-medium">Databricks/Spark</span>, create internal <span className="text-[var(--accent)] font-medium">dashboards</span>, and participate in production policy changes. My goal is to make limit decisions more precise, safe, and profitable using data in a structured and transparent way.
+          I’m a <strong className="text-[var(--text)]">Business Analyst in <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence)</strong>, focused on credit card limit policies in multiple countries. I connect <span className="text-[var(--accent)] font-medium">data</span>, risk/revenue models, and product to design, test, and monitor limit-increase policies based on the full set of metrics that involve the credit card. I work with limit <span className="text-[var(--accent)] font-medium">experiments</span> (test vs control), adjust caps, blocks, and eligibility rules, build monitoring pipelines in <span className="text-[var(--accent)] font-medium">Databricks</span>, create internal <span className="text-[var(--accent)] font-medium">dashboards</span>, and participate in production policy changes.
         </p>
         <p className="text-sm">
           <Link href="/en" className="text-[var(--accent)] font-medium hover:underline">
@@ -135,6 +172,7 @@ export default function Home() {
           </Link>
         </p>
       </section>
+
     </div>
   );
 }

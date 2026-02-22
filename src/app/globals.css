@@ -18,8 +18,16 @@
   --border: #2a2a2a;
 }
 
+[data-theme="terminal"] {
+  --bg: #0a0e14;
+  --text: #7ee787;
+  --muted: #79c0ff;
+  --accent: #ff7b72;
+  --border: #21262d;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme="light"]):not([data-theme="terminal"]) {
     --bg: #0f0f0f;
     --text: #f0f0f0;
     --muted: #a0a0a0;
@@ -28,7 +36,58 @@
   }
 }
 
+@keyframes bounceRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+.arrow-point-theme {
+  animation: bounceRight 1.5s ease-in-out infinite;
+}
+
+@keyframes fillProgressBar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.experience-progress-bar {
+  width: 0%;
+  height: 100%;
+  display: block;
+  animation: fillProgressBar 1.8s ease-out forwards;
+}
+
+@keyframes firework-particle {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--end-x, 0), var(--end-y, 0));
+    opacity: 0;
+  }
+}
+
+.animate-firework-particle {
+  animation: firework-particle 1.2s ease-out forwards;
+}
+
+@keyframes splash-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.splash-fade-in {
+  animation: splash-fade-in 0.7s ease-out forwards;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
+  word-wrap: break-word;
+  overflow-x: hidden;
 }

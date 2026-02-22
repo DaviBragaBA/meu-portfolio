@@ -7,7 +7,7 @@ import { HighlightPhrases } from "@/components/HighlightPhrases";
 export const metadata: Metadata = {
   title: "About (English) | Davi Braga",
   description:
-    "Business Analyst in Core Limit Policies (Excellence). Credit card limits, metrics, experiments.",
+    "Davi Braga – Business Analyst in Core Limit Policies (Excellence). Credit card limit policies, A/B experiments, metrics, Databricks, dashboards. Brazil and Mexico.",
 };
 
 export default function EnPage() {
@@ -40,7 +40,7 @@ export default function EnPage() {
             Projects →
           </Link>
           <Link href="/formation" className="inline-flex items-center gap-2 text-[var(--accent)] font-medium hover:underline">
-            Formation →
+            Education →
           </Link>
         </div>
       </section>
@@ -53,24 +53,21 @@ export default function EnPage() {
           <strong className="text-[var(--text)]">
             Business Analyst in <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence)
           </strong>
-          , focused on credit card limit policies in multiple countries. Day to
-          day, I connect <span className="text-[var(--accent)] font-medium">data</span>, risk/revenue models and product to design, test
-          and monitor limit increase policies based on the full set of metrics that involve credit card.
+          , focused on credit card limit policies in multiple countries. Day-to-day, I connect <span className="text-[var(--accent)] font-medium">data</span>, risk/revenue models, and product to design, test,
+          and monitor limit-increase policies based on the full set of metrics that involve the credit card.
         </p>
         <p>
-          I work with limit <span className="text-[var(--accent)] font-medium">experiments</span> (test vs control), analyzing impact on
+          I work with limit <span className="text-[var(--accent)] font-medium">experiments</span> (test vs. control), analyzing impact on
           purchase volume, interest‑bearing average daily balance, outstanding
-          balance and risk. From that, I help adjust caps, blocks and eligibility
-          rules, always looking at the trade‑off between revenues, losses,
+          balance and risk. From that, I help adjust caps, blocks, and eligibility
+          rules, always looking at the trade‑off between revenue, losses,
           capital and exposure.
         </p>
         <p>
-          I build monitoring pipelines in <span className="text-[var(--accent)] font-medium">Databricks/Spark</span>, create internal
+          I build monitoring pipelines in <span className="text-[var(--accent)] font-medium">Databricks</span>, create internal
           <span className="text-[var(--accent)] font-medium">dashboards</span> for budget and policy performance, and take part in
           implementing changes in the production policy (for example,
-          compliance‑related blocking rules). My goal is to make limit
-          decisions more precise, safe and profitable, using data in a structured
-          and transparent way.
+          compliance‑related blocking rules).
         </p>
       </section>
 
@@ -94,12 +91,11 @@ export default function EnPage() {
             <HighlightPhrases
               text={personal.formacaoEmUmaLinhaEn}
               phrases={[
-                "Software Engineering in Applied AI",
+                "Software Engineering in AI",
                 "Business Data Intelligence",
                 "Information Systems",
                 "UNIFEI",
                 "ESPM",
-                "EAD",
               ]}
             />
           </li>
@@ -146,8 +142,8 @@ export default function EnPage() {
               I work in Databricks and in monitoring pipelines to create and
               maintain datasets for policy monitoring — especially budget
               monitoring for limit increase experiments, aggregated by business
-              month, cohort, risk band, policy and version. I write Spark
-              transformations, compute test vs control deltas, and generate
+              month, risk band, policy and version. I write
+              transformations to join and aggregate data, compute test vs control deltas, and generate
               tables for dashboards. I run validation runs and track them in job
               monitoring tools before changes go to production.
             </p>
@@ -225,8 +221,8 @@ export default function EnPage() {
             healthy in terms of usage, revenues and risk.
           </li>
           <li>
-            Develop monitoring pipelines in Databricks/Spark,
-            aggregating budget metrics by business month, cohort, risk
+            Develop monitoring pipelines in Databricks,
+            aggregating budget metrics by business month, risk
             band, policy and version, aligned with FP&A views.
           </li>
           <li>
@@ -264,7 +260,7 @@ export default function EnPage() {
           </li>
           <li>
             <strong className="text-[var(--text)]">Monitoring pipelines</strong>{" "}
-            – budget monitoring by country, cohort and risk band.
+            – budget monitoring by country and risk band.
           </li>
           <li>
             <strong className="text-[var(--text)]">Internal dashboards</strong> –

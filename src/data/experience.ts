@@ -17,10 +17,9 @@ export const experiences: Experience[] = [
     company: "Nubank",
     role: "Business Analyst – Core Limit Policies (Excellence)",
     description:
-      "Políticas de limite de cartão em múltiplos países. Experimentos (teste vs controle), métricas de cartão, pipelines de monitoria em Databricks/Spark e dashboards internos.",
+      "Políticas de limite de cartão em múltiplos países. Experimentos (teste vs. controle), métricas de cartão, pipelines de monitoria em Databricks e dashboards internos.",
     tags: [
       "Databricks",
-      "Apache Spark",
       "SQL",
       "Dashboards",
       "Métricas de cartão",
@@ -29,9 +28,9 @@ export const experiences: Experience[] = [
     highlights: [
       "Analiso experimentos de aumento de limite de cartão comparando grupos de teste e controle, medindo impacto em volume de compras, saldo médio diário que rende juros, saldo em aberto e limite.",
       "Calculo métricas como diferença de volume de compras, diferença de saldo médio, diferença de saldo em aberto e utilização marginal (ex.: volume de compras extra por real de limite extra), para entender se o aumento de limite está sendo saudável em termos de uso, receita e risco.",
-      "Desenvolvo pipelines de monitoria em Databricks/Spark, agregando métricas de budget por mês de negócio, coorte, banda de risco, política e versão, alinhadas com visão de FP&A.",
+      "Desenvolvo pipelines de monitoria em Databricks, agregando métricas de budget por mês de negócio, banda de risco, política e versão, alinhadas com visão de FP&A.",
       "Crio e evoluo dashboards internos para acompanhar, em tempo quase real, o desempenho de políticas e experimentos de limite.",
-      "Participo da implementação de regras de política em produção (ex.: blocos ligados à conformidade bancária), ajustando datasets de entrada e blocos de decisão nos sistemas de política e dados.",
+      "Participo da implementação de regras de política em produção (ex.: blocks ligados à conformidade bancária), ajustando datasets de entrada e blocks de decisão nos sistemas de política e dados.",
       "Trabalho em parceria com engenheiros de dados e cientistas de dados para alinhar modelos de risco, modelos de saldo médio e métricas que envolvem cartão com a prática de política, garantindo que monitorias e decisões reflitam corretamente o comportamento real da carteira.",
       "Documento análises, decisões e aprendizados em ferramentas de documentação e apresentações, ajudando a traduzir conceitos de métricas de cartão, risco e receita em narrativas claras para stakeholders técnicos e de negócio.",
     ],
@@ -49,11 +48,11 @@ export const experiences: Experience[] = [
       "SQL",
       "PL/SQL",
       "HubSpot",
-      "Vizualização de dados",
+      "Visualização de dados",
     ],
     highlights: [
       "Criação e manutenção de dashboards no Metabase com KPIs de performance, funil de vendas e indicadores de receita, permitindo acompanhamento em tempo quase real pela área Comercial e por Customer Success.",
-      "Automação de relatórios com SQL e PL/SQL, reduzindo tempo operacional de consolidação e aumentando a confiabilidade e a reprodutibilidade dos números apresentados à diretoria.",
+      "Automação de relatórios com SQL e PL/SQL, reduzindo o tempo operacional de consolidação e aumentando a confiabilidade e a reprodutibilidade dos números apresentados à diretoria.",
       "Interface constante com áreas de CS e Comercial para mapeamento de processos, desenho de métricas e identificação de oportunidades de melhoria contínua com base em evidências.",
       "Identificação de gargalos operacionais e proposição de soluções orientadas a dados, incluindo sugestões de novos indicadores e ajustes em fluxos de acompanhamento de metas.",
       "Participação em reuniões de acompanhamento de resultados e no desenho de metas comerciais, trazendo visão analítica e suporte à priorização de iniciativas com impacto em receita.",

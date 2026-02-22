@@ -5,7 +5,8 @@ import { TagWithTooltip } from "@/components/TagWithTooltip";
 
 export const metadata = {
   title: "Projetos | Davi Braga",
-  description: "Projetos em Core Limit Policies e projetos pessoais (HTML, documentação, diagramas).",
+  description:
+    "Projetos em Core Limit Policies (monitoria, dashboards, compliance) e projetos pessoais: guias em HTML, diagramas de fluxo, documentação e materiais de estudo.",
 };
 
 export default function ProjetosPage() {
@@ -47,9 +48,8 @@ export default function ProjetosPage() {
           Projetos pessoais
         </h2>
         <p className="text-sm text-[var(--muted)] mb-6">
-          Materiais em HTML da área de trabalho: guias, diagramas, templates e
-          conteúdos de estudo. Quando publicar em algum link, avise para
-          adicionarmos aqui.
+          Guias, diagramas, templates e conteúdos de estudo em HTML que criei e
+          disponibilizo nos links abaixo.
         </p>
         <div className="space-y-8">
           {personalProjects.map((proj) => (
@@ -74,11 +74,13 @@ export default function ProjetosPage() {
               <p className="text-[var(--muted)] text-sm leading-relaxed mb-3">
                 {proj.description}
               </p>
-              <div className="flex flex-wrap gap-2">
-                {proj.tags.map((tag) => (
-                  <TagWithTooltip key={tag} tag={tag} />
-                ))}
-              </div>
+              {Array.from(new Set(proj.tags)).length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {Array.from(new Set(proj.tags)).map((tag) => (
+                    <TagWithTooltip key={tag} tag={tag} />
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
