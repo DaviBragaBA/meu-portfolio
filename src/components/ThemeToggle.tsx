@@ -50,7 +50,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={cycle}
-      className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--border)]/50 transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center"
+      className="p-2 rounded-lg text-(--muted) hover:text-(--text) transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center"
       title={labels[theme]}
       aria-label={labels[theme]}
     >

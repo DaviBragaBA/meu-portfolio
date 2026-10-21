@@ -11,7 +11,7 @@ export function FotosInicio() {
       {fotos.map((foto) => (
         <div
           key={foto.jpeg}
-          className="w-28 h-28 sm:w-36 sm:h-36 rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--border)]/20 flex-shrink-0"
+          className="w-28 h-28 sm:w-36 sm:h-36 rounded-xl overflow-hidden border border-(--border) bg-(--border)/20 shrink-0"
         >
           <img
             src={foto.jpeg}

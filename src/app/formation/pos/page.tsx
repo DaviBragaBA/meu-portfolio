@@ -11,20 +11,20 @@ export const metadata = {
 export default function FormationPosPage() {
   return (
     <div className="space-y-14">
-      <p className="text-sm text-[var(--muted)]">
-        <Link href="/formation" className="hover:text-[var(--accent)]">
+      <p className="text-sm text-(--muted)">
+        <Link href="/formation" className="hover:text-(--accent)">
           ← Formação
         </Link>
       </p>
 
-      <header className="border-b border-[var(--border)] pb-10">
-        <p className="text-sm font-medium text-[var(--accent)] uppercase tracking-wider">
+      <header className="border-b border-(--border) pb-10">
+        <p className="text-sm font-medium text-(--accent) uppercase tracking-wider">
           ESPM
         </p>
         <h1 className="text-2xl sm:text-4xl font-semibold tracking-tight mt-1">
           Pós-Graduação em Inteligência de Dados em Negócios
         </h1>
-        <p className="text-[var(--muted)] mt-4 max-w-2xl leading-relaxed">
+        <p className="text-(--muted) mt-4 max-w-2xl leading-relaxed">
           Programa completo e sumário da formação: estrutura curricular,
           disciplinas, módulos, carga horária e ementas. O curso combina
           fundamentos de dados, analytics e decisão em negócios com aplicação
@@ -33,20 +33,20 @@ export default function FormationPosPage() {
       </header>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-4 border-b border-[var(--border)] pb-2">
+        <h2 className="text-lg font-semibold text-(--text) mb-4 border-b border-(--border) pb-2">
           Sobre o programa
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 text-[var(--muted)] text-sm leading-relaxed">
-          <div className="rounded-lg border border-[var(--border)] p-5 bg-[var(--border)]/10">
-            <h3 className="font-medium text-[var(--text)] mb-2">Objetivo</h3>
+        <div className="grid gap-6 sm:grid-cols-2 text-(--muted) text-sm leading-relaxed">
+          <div className="rounded-lg border border-(--border) p-5">
+            <h3 className="font-medium text-(--text) mb-2">Objetivo</h3>
             <p>
               Formar profissionais capazes de liderar a transformação baseada em
               dados nas organizações, desenhar estratégias de analytics e
               traduzir dados em decisão de negócios.
             </p>
           </div>
-          <div className="rounded-lg border border-[var(--border)] p-5 bg-[var(--border)]/10">
-            <h3 className="font-medium text-[var(--text)] mb-2">Público</h3>
+          <div className="rounded-lg border border-(--border) p-5">
+            <h3 className="font-medium text-(--text) mb-2">Público</h3>
             <p>
               Gestores, analistas e profissionais de negócios e tecnologia que
               queiram aprofundar conhecimentos em inteligência de dados,
@@ -57,7 +57,7 @@ export default function FormationPosPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-4 border-b border-[var(--border)] pb-2">
+        <h2 className="text-lg font-semibold text-(--text) mb-4 border-b border-(--border) pb-2">
           Estrutura curricular e sumário
         </h2>
         <PosSumarioAccordion modulos={modulosPos} />

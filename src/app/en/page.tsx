@@ -13,81 +13,81 @@ export const metadata: Metadata = {
 export default function EnPage() {
   return (
     <div className="space-y-12">
-      <p className="text-sm text-[var(--muted)]">
-        <Link href="/" className="hover:text-[var(--accent)]">
+      <p className="text-sm text-(--muted)">
+        <Link href="/" className="hover:text-(--accent)">
           ← Português
         </Link>
       </p>
 
-      <h1 className="text-2xl font-semibold tracking-tight text-[var(--muted)]">
+      <h1 className="text-2xl font-semibold tracking-tight text-(--muted)">
         About (English)
       </h1>
 
       {/* Headline */}
       <section className="space-y-4">
-        <p className="text-lg font-medium text-[var(--text)]">
-          Business Analyst | <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence) | Credit card
-          limits, <span className="text-[var(--accent)] font-medium">metrics</span> and limit <span className="text-[var(--accent)] font-medium">experiments</span> (BR/MX/COL)
+        <p className="text-lg font-medium text-(--text)">
+          Business Analyst | <span className="text-(--accent) font-medium">Core Limit Policies</span> (Excellence) | Credit card
+          limits, <span className="text-(--accent) font-medium">metrics</span> and limit <span className="text-(--accent) font-medium">experiments</span> (BR/MX/COL)
         </p>
-        <p className="text-[var(--muted)] max-w-xl">
-          Digital bank · Credit cards · Limits and policies · <span className="text-[var(--accent)] font-medium">Data pipelines</span> · <span className="text-[var(--accent)] font-medium">Monitoring dashboards</span>
+        <p className="text-(--muted) max-w-xl">
+          Digital bank · Credit cards · Limits and policies · <span className="text-(--accent) font-medium">Data pipelines</span> · <span className="text-(--accent) font-medium">Monitoring dashboards</span>
         </p>
         <div className="pt-2 flex flex-wrap gap-6">
-          <Link href="/projects" className="inline-flex items-center gap-2 text-[var(--accent)] font-medium hover:underline">
+          <Link href="/projects" className="inline-flex items-center gap-2 text-(--accent) font-medium hover:underline">
             Experience →
           </Link>
-          <Link href="/projetos" className="inline-flex items-center gap-2 text-[var(--accent)] font-medium hover:underline">
+          <Link href="/projetos" className="inline-flex items-center gap-2 text-(--accent) font-medium hover:underline">
             Projects →
           </Link>
-          <Link href="/formation" className="inline-flex items-center gap-2 text-[var(--accent)] font-medium hover:underline">
+          <Link href="/formation" className="inline-flex items-center gap-2 text-(--accent) font-medium hover:underline">
             Education →
           </Link>
         </div>
       </section>
 
       {/* About section (LinkedIn) */}
-      <section className="space-y-4 text-[var(--muted)] leading-relaxed">
-        <h2 className="text-lg font-semibold text-[var(--text)]">About</h2>
+      <section className="space-y-4 text-(--muted) leading-relaxed">
+        <h2 className="text-lg font-semibold text-(--text)">About</h2>
         <p>
           I am a{" "}
-          <strong className="text-[var(--text)]">
-            Business Analyst in <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence)
+          <strong className="text-(--text)">
+            Business Analyst in <span className="text-(--accent) font-medium">Core Limit Policies</span> (Excellence)
           </strong>
-          , focused on credit card limit policies in multiple countries. Day-to-day, I connect <span className="text-[var(--accent)] font-medium">data</span>, risk/revenue models, and product to design, test,
+          , focused on credit card limit policies in multiple countries. Day-to-day, I connect <span className="text-(--accent) font-medium">data</span>, risk/revenue models, and product to design, test,
           and monitor limit-increase policies based on the full set of metrics that involve the credit card.
         </p>
         <p>
-          I work with limit <span className="text-[var(--accent)] font-medium">experiments</span> (test vs. control), analyzing impact on
+          I work with limit <span className="text-(--accent) font-medium">experiments</span> (test vs. control), analyzing impact on
           purchase volume, interest‑bearing average daily balance, outstanding
           balance and risk. From that, I help adjust caps, blocks, and eligibility
           rules, always looking at the trade‑off between revenue, losses,
           capital and exposure.
         </p>
         <p>
-          I build monitoring pipelines in <span className="text-[var(--accent)] font-medium">Databricks</span>, create internal
-          <span className="text-[var(--accent)] font-medium">dashboards</span> for budget and policy performance, and take part in
+          I build monitoring pipelines in <span className="text-(--accent) font-medium">Databricks</span>, create internal
+          <span className="text-(--accent) font-medium">dashboards</span> for budget and policy performance, and take part in
           implementing changes in the production policy (for example,
           compliance‑related blocking rules).
         </p>
       </section>
 
       {/* Who I am */}
-      <section className="space-y-5 pb-8 border-b border-[var(--border)] text-[var(--muted)] leading-relaxed">
-        <h2 className="text-lg font-semibold text-[var(--text)]">
+      <section className="space-y-5 pb-8 border-b border-(--border) text-(--muted) leading-relaxed">
+        <h2 className="text-lg font-semibold text-(--text)">
           Who I am
         </h2>
         <ul className="text-sm space-y-2">
-          <li><span className="text-[var(--text)] font-medium">{personal.fullName}</span> · <Age /></li>
+          <li><span className="text-(--text) font-medium">{personal.fullName}</span> · <Age /></li>
           <li>
-            <a href={`mailto:${personal.email}`} className="text-[var(--accent)] hover:underline">{personal.email}</a>
+            <a href={`mailto:${personal.email}`} className="text-(--accent) hover:underline">{personal.email}</a>
             {" · "}
-            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">LinkedIn</a>
+            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="text-(--accent) hover:underline">LinkedIn</a>
           </li>
           <li>Born in {personal.birthCity} · Living in {personal.currentCity}</li>
           <li>{personal.alunoDestaqueEn}</li>
-          <li><span className="text-[var(--text)] font-medium">Languages:</span> {personal.idiomasEn}</li>
+          <li><span className="text-(--text) font-medium">Languages:</span> {personal.idiomasEn}</li>
           <li>
-            <span className="text-[var(--text)] font-medium">Formation:</span>{" "}
+            <span className="text-(--text) font-medium">Formation:</span>{" "}
             <HighlightPhrases
               text={personal.formacaoEmUmaLinhaEn}
               phrases={[
@@ -99,10 +99,10 @@ export default function EnPage() {
               ]}
             />
           </li>
-          <li><span className="text-[var(--text)] font-medium">Personality:</span> {personal.personalidadeEn}</li>
+          <li><span className="text-(--text) font-medium">Personality:</span> {personal.personalidadeEn}</li>
         </ul>
         <div>
-          <h3 className="text-base font-medium text-[var(--text)] mb-2">What motivates me</h3>
+          <h3 className="text-base font-medium text-(--text) mb-2">What motivates me</h3>
           <p className="text-base leading-relaxed italic">
             {personal.motivacaoEn}
           </p>
@@ -110,14 +110,14 @@ export default function EnPage() {
       </section>
 
       {/* What I do day to day */}
-      <section className="space-y-8 text-[var(--muted)] leading-relaxed">
-        <h2 className="text-lg font-semibold text-[var(--text)]">
+      <section className="space-y-8 text-(--muted) leading-relaxed">
+        <h2 className="text-lg font-semibold text-(--text)">
           What I do day to day
         </h2>
 
         <div className="space-y-6">
           <div>
-            <h3 className="font-medium text-[var(--text)] mb-2">
+            <h3 className="font-medium text-(--text) mb-2">
               1. Understanding how limit policies affect customer behavior
             </h3>
             <p className="mb-3">
@@ -135,7 +135,7 @@ export default function EnPage() {
           </div>
 
           <div>
-            <h3 className="font-medium text-[var(--text)] mb-2">
+            <h3 className="font-medium text-(--text) mb-2">
               2. Building and maintaining monitoring datasets
             </h3>
             <p>
@@ -150,7 +150,7 @@ export default function EnPage() {
           </div>
 
           <div>
-            <h3 className="font-medium text-[var(--text)] mb-2">
+            <h3 className="font-medium text-(--text) mb-2">
               3. Creating dashboards and visual narratives
             </h3>
             <p>
@@ -166,7 +166,7 @@ export default function EnPage() {
           </div>
 
           <div>
-            <h3 className="font-medium text-[var(--text)] mb-2">
+            <h3 className="font-medium text-(--text) mb-2">
               4. Bringing changes into the production policy
             </h3>
             <p>
@@ -181,7 +181,7 @@ export default function EnPage() {
           </div>
 
           <div>
-            <h3 className="font-medium text-[var(--text)] mb-2">
+            <h3 className="font-medium text-(--text) mb-2">
               5. Documenting, aligning and learning
             </h3>
             <p>
@@ -197,11 +197,11 @@ export default function EnPage() {
       </section>
 
       {/* Current experience */}
-      <section className="space-y-4 text-[var(--muted)] leading-relaxed">
-        <h2 className="text-lg font-semibold text-[var(--text)]">
+      <section className="space-y-4 text-(--muted) leading-relaxed">
+        <h2 className="text-lg font-semibold text-(--text)">
           Current experience
         </h2>
-        <p className="font-medium text-[var(--text)]">
+        <p className="font-medium text-(--text)">
           Business Analyst – Core Limit Policies (Excellence)
         </p>
         <p className="text-sm">
@@ -248,48 +248,48 @@ export default function EnPage() {
       </section>
 
       {/* Tools I use daily */}
-      <section className="space-y-4 text-[var(--muted)] leading-relaxed">
-        <h2 className="text-lg font-semibold text-[var(--text)]">
+      <section className="space-y-4 text-(--muted) leading-relaxed">
+        <h2 className="text-lg font-semibold text-(--text)">
           Tools I use daily
         </h2>
         <ul className="space-y-2 text-sm">
           <li>
-            <strong className="text-[var(--text)]">Databricks</strong> –
+            <strong className="text-(--text)">Databricks</strong> –
             exploring data, validating monitoring datasets, testing calculation
             logic.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Monitoring pipelines</strong>{" "}
+            <strong className="text-(--text)">Monitoring pipelines</strong>{" "}
             – budget monitoring by country and risk band.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Internal dashboards</strong> –
+            <strong className="text-(--text)">Internal dashboards</strong> –
             visual reports for Core Limit Policies and budget metrics.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Policy and data systems</strong> –
+            <strong className="text-(--text)">Policy and data systems</strong> –
             implementing changes in blocks and policy input datasets in
             production.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Job orchestration and
+            <strong className="text-(--text)">Job orchestration and
             monitoring tools</strong> – running and tracking data jobs.
           </li>
           <li>
-            <strong className="text-[var(--text)]">GitHub</strong> – Pull
+            <strong className="text-(--text)">GitHub</strong> – Pull
             Requests related to policy, monitoring and dashboards.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Documentation and
+            <strong className="text-(--text)">Documentation and
             collaboration tools</strong> – documenting policies, models and
             decisions.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Communication tools</strong> –
+            <strong className="text-(--text)">Communication tools</strong> –
             daily alignment with technical and business teams.
           </li>
           <li>
-            <strong className="text-[var(--text)]">Internal search</strong> –
+            <strong className="text-(--text)">Internal search</strong> –
             finding docs, dashboards and metric definitions.
           </li>
         </ul>

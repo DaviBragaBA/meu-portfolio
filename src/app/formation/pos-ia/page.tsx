@@ -11,20 +11,20 @@ export const metadata = {
 export default function FormationPosIAPage() {
   return (
     <div className="space-y-14">
-      <p className="text-sm text-[var(--muted)]">
-        <Link href="/formation" className="hover:text-[var(--accent)]">
+      <p className="text-sm text-(--muted)">
+        <Link href="/formation" className="hover:text-(--accent)">
           ← Formação
         </Link>
       </p>
 
-      <header className="border-b border-[var(--border)] pb-10">
-        <p className="text-sm font-medium text-[var(--accent)] uppercase tracking-wider">
+      <header className="border-b border-(--border) pb-10">
+        <p className="text-sm font-medium text-(--accent) uppercase tracking-wider">
           Pós-Graduação Lato Sensu
         </p>
         <h1 className="text-2xl sm:text-4xl font-semibold tracking-tight mt-1">
           Engenharia de Software em IA
         </h1>
-        <p className="text-[var(--muted)] mt-4 max-w-2xl leading-relaxed">
+        <p className="text-(--muted) mt-4 max-w-2xl leading-relaxed">
           Especialização na integração entre Engenharia de Software e
           Inteligência Artificial: LLMs, agentes autônomos, MCP, RAG,
           fine-tuning (LoRA/PEFT), MLOps, APIs generativas e governança em IA.
@@ -34,12 +34,12 @@ export default function FormationPosIAPage() {
       </header>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-4 border-b border-[var(--border)] pb-2">
+        <h2 className="text-lg font-semibold text-(--text) mb-4 border-b border-(--border) pb-2">
           Sobre o programa
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 text-[var(--muted)] text-sm leading-relaxed">
-          <div className="rounded-lg border border-[var(--border)] p-5 bg-[var(--border)]/10">
-            <h3 className="font-medium text-[var(--text)] mb-2">
+        <div className="grid gap-6 sm:grid-cols-2 text-(--muted) text-sm leading-relaxed">
+          <div className="rounded-lg border border-(--border) p-5">
+            <h3 className="font-medium text-(--text) mb-2">
               Objetivo geral
             </h3>
             <p>
@@ -50,8 +50,8 @@ export default function FormationPosIAPage() {
               inteligente, governança algorítmica e práticas seguras e éticas.
             </p>
           </div>
-          <div className="rounded-lg border border-[var(--border)] p-5 bg-[var(--border)]/10">
-            <h3 className="font-medium text-[var(--text)] mb-2">
+          <div className="rounded-lg border border-(--border) p-5">
+            <h3 className="font-medium text-(--text) mb-2">
               Público-alvo
             </h3>
             <p>
@@ -64,8 +64,8 @@ export default function FormationPosIAPage() {
             </p>
           </div>
         </div>
-        <div className="mt-6 rounded-lg border border-[var(--border)] p-5 bg-[var(--border)]/10 text-[var(--muted)] text-sm leading-relaxed">
-          <h3 className="font-medium text-[var(--text)] mb-2">Justificativa</h3>
+        <div className="mt-6 rounded-lg border border-(--border) p-5 text-(--muted) text-sm leading-relaxed">
+          <h3 className="font-medium text-(--text) mb-2">Justificativa</h3>
           <p>
             A IA tornou-se pilar central da transformação digital. A integração
             entre engenharia de software e IA impulsiona automação industrial,
@@ -79,10 +79,10 @@ export default function FormationPosIAPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-4 border-b border-[var(--border)] pb-2">
+        <h2 className="text-lg font-semibold text-(--text) mb-4 border-b border-(--border) pb-2">
           Conteúdo programático
         </h2>
-        <p className="text-[var(--muted)] text-sm mb-4">
+        <p className="text-(--muted) text-sm mb-4">
           Ementas e conteúdos programáticos de cada disciplina. Clique para
           expandir.
         </p>

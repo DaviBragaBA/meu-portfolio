@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SplashGate } from "@/components/SplashGate";
 
 const inter = Inter({
-  variable: "--font-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 

@@ -10,7 +10,7 @@ export const metadata = {
 export default function FormationPage() {
   return (
     <div className="space-y-12">
-      <h1 className="text-2xl font-semibold tracking-tight text-[var(--muted)]">
+      <h1 className="text-2xl font-semibold tracking-tight text-(--muted)">
         Formação acadêmica
       </h1>
 

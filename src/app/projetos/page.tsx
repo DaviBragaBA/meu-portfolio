@@ -12,25 +12,25 @@ export const metadata = {
 export default function ProjetosPage() {
   return (
     <div className="space-y-14">
-      <h1 className="text-2xl font-semibold tracking-tight text-[var(--muted)]">
+      <h1 className="text-2xl font-semibold tracking-tight text-(--muted)">
         Projetos
       </h1>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-6 border-b border-[var(--border)] pb-2">
+        <h2 className="text-lg font-semibold text-(--text) mb-6 border-b border-(--border) pb-2">
           Trabalho (Core Limit Policies)
         </h2>
         <div className="space-y-10">
           {projects.map((project) => (
             <article
               key={project.id}
-              className="border-b border-[var(--border)] pb-10 last:border-0"
+              className="border-b border-(--border) pb-10 last:border-0"
             >
-              <p className="text-sm text-[var(--muted)] mb-1">{project.context}</p>
-              <h3 className="text-xl font-semibold text-[var(--text)] mb-2">
+              <p className="text-sm text-(--muted) mb-1">{project.context}</p>
+              <h3 className="text-xl font-semibold text-(--text) mb-2">
                 {project.title}
               </h3>
-              <p className="text-[var(--muted)] leading-relaxed mb-4">
+              <p className="text-(--muted) leading-relaxed mb-4">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
@@ -44,10 +44,10 @@ export default function ProjetosPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text)] mb-6 border-b border-[var(--border)] pb-2">
+        <h2 className="text-lg font-semibold text-(--text) mb-6 border-b border-(--border) pb-2">
           Projetos pessoais
         </h2>
-        <p className="text-sm text-[var(--muted)] mb-6">
+        <p className="text-sm text-(--muted) mb-6">
           Guias, diagramas, templates e conteúdos de estudo em HTML que criei e
           disponibilizo nos links abaixo.
         </p>
@@ -55,15 +55,15 @@ export default function ProjetosPage() {
           {personalProjects.map((proj) => (
             <article
               key={proj.id}
-              className="border-b border-[var(--border)] pb-8 last:border-0"
+              className="border-b border-(--border) pb-8 last:border-0"
             >
-              <h3 className="text-lg font-semibold text-[var(--text)] mb-2">
+              <h3 className="text-lg font-semibold text-(--text) mb-2">
                 {proj.url ? (
                   <Link
                     href={proj.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--accent)] hover:underline"
+                    className="text-(--accent) hover:underline"
                   >
                     {proj.title} →
                   </Link>
@@ -71,7 +71,7 @@ export default function ProjetosPage() {
                   proj.title
                 )}
               </h3>
-              <p className="text-[var(--muted)] text-sm leading-relaxed mb-3">
+              <p className="text-(--muted) text-sm leading-relaxed mb-3">
                 {proj.description}
               </p>
               {Array.from(new Set(proj.tags)).length > 0 && (

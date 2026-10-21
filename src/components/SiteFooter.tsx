@@ -14,22 +14,22 @@ const footerLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-16 pt-10 pb-6 border-t border-[var(--border)]">
+    <footer className="mt-16 pt-10 pb-6 border-t border-(--border)">
       <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
         {/* Marca + contato */}
         <div className="space-y-4">
           <div>
-            <p className="text-sm font-semibold text-[var(--text)]">
+            <p className="text-sm font-semibold text-(--text)">
               {personal.fullName}
             </p>
-            <p className="text-xs text-[var(--muted)] mt-0.5">
+            <p className="text-xs text-(--muted) mt-0.5">
               Business Analyst · Core Limit Policies
             </p>
           </div>
-          <div className="flex flex-col gap-1.5 text-sm text-[var(--muted)]">
+          <div className="flex flex-col gap-1.5 text-sm text-(--muted)">
             <a
               href={`mailto:${personal.email}`}
-              className="text-[var(--accent)] hover:underline w-fit"
+              className="text-(--accent) hover:underline w-fit"
             >
               {personal.email}
             </a>
@@ -37,7 +37,7 @@ export function SiteFooter() {
               href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--accent)] hover:underline w-fit"
+              className="text-(--accent) hover:underline w-fit"
             >
               LinkedIn
             </a>
@@ -46,7 +46,7 @@ export function SiteFooter() {
 
         {/* Navegação */}
         <div className="space-y-3">
-          <p className="text-xs font-medium uppercase tracking-wider text-[var(--muted)]">
+          <p className="text-xs font-medium uppercase tracking-wider text-(--muted)">
             Navegação
           </p>
           <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
@@ -54,7 +54,7 @@ export function SiteFooter() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-[var(--muted)] hover:text-[var(--accent)] hover:underline"
+                  className="text-(--muted) hover:text-(--accent) hover:underline"
                 >
                   {label}
                 </Link>
@@ -64,7 +64,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mt-8 pt-6 border-t border-[var(--border)]/60 text-center text-xs text-[var(--muted)]/80">
+      <div className="mt-8 pt-6 border-t text-center text-xs">
         Última atualização: {lastUpdated}
       </div>
     </footer>

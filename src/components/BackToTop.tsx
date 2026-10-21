@@ -39,7 +39,7 @@ export function BackToTop() {
     <button
       type="button"
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-[9999] rounded-full border-2 border-[var(--accent)] bg-[var(--bg)] p-3 text-[var(--accent)] shadow-lg hover:bg-[var(--accent)] hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2"
+      className="fixed bottom-6 right-6 z-9999 rounded-full border-2 border-(--accent) bg-(--bg) p-3 text-(--accent) shadow-lg hover:bg-(--accent) hover:text-white transition-colors focus:outline-hidden focus:ring-2 focus:ring-(--accent) focus:ring-offset-2"
       aria-label="Voltar ao topo"
       title="Voltar ao topo"
     >

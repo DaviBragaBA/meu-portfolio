@@ -10,7 +10,7 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <div className="space-y-12">
-      <h1 className="text-2xl font-semibold tracking-tight text-[var(--muted)]">
+      <h1 className="text-2xl font-semibold tracking-tight text-(--muted)">
         Lugares que trabalhei
       </h1>
 

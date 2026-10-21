@@ -38,16 +38,16 @@ export function EasterEgg() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity duration-300"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs transition-opacity duration-300"
       role="dialog"
       aria-label="Easter egg"
       onClick={() => setShow(false)}
     >
       <div
-        className="mx-4 max-w-sm rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-6 shadow-xl transition-transform duration-300"
+        className="mx-4 max-w-sm rounded-2xl border border-(--border) bg-(--bg) p-6 shadow-xl transition-transform duration-300"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--border)]/20">
+        <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-(--border)">
           <Image
             src="/fotos/cachorro.jpeg"
             alt="Banguela"
@@ -56,10 +56,10 @@ export function EasterEgg() {
             sizes="320px"
           />
         </div>
-        <p className="mt-4 text-center text-sm font-medium text-[var(--text)]">
+        <p className="mt-4 text-center text-sm font-medium text-(--text)">
           Esse é o Banguela, meu fiel companheiro. 🐕
         </p>
-        <p className="mt-1 text-center text-xs text-[var(--muted)]">
+        <p className="mt-1 text-center text-xs text-(--muted)">
           (você achou o easter egg!)
         </p>
       </div>

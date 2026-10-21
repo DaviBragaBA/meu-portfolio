@@ -26,7 +26,7 @@ export function HighlightPhrases({
     const { p: match, i } = matching;
     if (i > 0) parts.push(rest.slice(0, i));
     parts.push(
-      <span key={`${match}-${parts.length}`} className="text-[var(--accent)] font-medium">
+      <span key={`${match}-${parts.length}`} className="text-(--accent) font-medium">
         {match}
       </span>
     );

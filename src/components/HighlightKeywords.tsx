@@ -1,4 +1,4 @@
-const ACCENT_CLASS = "text-[var(--accent)] font-medium";
+const ACCENT_CLASS = "text-(--accent) font-medium";
 
 function escapeRegex(s: string) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
