@@ -16,9 +16,9 @@ export const personal = {
   idiomas: "Inglês intermediário/avançado",
   idiomasEn: "Intermediate/advanced English",
   formacaoEmUmaLinha:
-    "Formado em Sistemas de Informação (UNIFEI). Pós em andamento: Inteligência de Dados em Negócios (ESPM) e Engenharia de Software em IA.",
+    "Formado em Sistemas de Informação (UNIFEI). Pós concluída: Inteligência de Dados em Negócios (ESPM). Em curso: Engenharia de Software em IA.",
   formacaoEmUmaLinhaEn:
-    "Degree in Information Systems (UNIFEI). In progress: Business Data Intelligence (ESPM) and Software Engineering in AI.",
+    "Degree in Information Systems (UNIFEI). Completed: Business Data Intelligence (ESPM). In progress: Software Engineering in AI.",
   motivacao:
     "Gosto de ambientes que exigem adaptação e aprendizado contínuo. Busco trabalhar em problemas que ainda não domino — acho que é onde mais aprendo.",
   motivacaoEn:
