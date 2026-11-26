@@ -6,6 +6,7 @@ import { HighlightPhrases } from "@/components/HighlightPhrases";
 import { HeroCountUp } from "@/components/HeroCountUp";
 import { ProjectsCountUp } from "@/components/ProjectsCountUp";
 import { PosProgressBar } from "@/components/PosProgressBar";
+import { Story } from "@/components/story/Story";
 import { projects } from "@/data/projects";
 import { education } from "@/data/education";
 import { agora } from "@/data/site";
@@ -27,11 +28,14 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="space-y-14">
-      {/* Headline */}
-      <div className="space-y-8">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+      {/* A história: Davi levanta do PC e percorre a casa, um quarto por secção */}
+      <Story />
+
+      {/* Perfil completo (texto indexável) */}
+      <div id="conteudo" className="space-y-8 pt-6">
+        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
           Davi Braga
-        </h1>
+        </h2>
         <p className="text-lg font-medium text-[var(--text)] max-w-2xl">
           Business Analyst | <span className="text-[var(--accent)] font-medium">Core Limit Policies</span> (Excellence) | Limites de
           cartão, <span className="text-[var(--accent)] font-medium">métricas</span> e <span className="text-[var(--accent)] font-medium">experimentos</span> de crédito (BR/MX/COL)

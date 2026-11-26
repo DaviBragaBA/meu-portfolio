@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { GlobalEffects } from "@/components/GlobalEffects";
@@ -9,6 +9,13 @@ import { SplashGate } from "@/components/SplashGate";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const viewport: Viewport = {
@@ -50,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased min-h-screen font-sans`}
+        className={`${inter.variable} ${fraunces.variable} antialiased min-h-screen font-sans`}
       >
         <script
           dangerouslySetInnerHTML={{
@@ -60,7 +67,7 @@ export default function RootLayout({
         <GlobalEffects />
         <SplashGate />
         <Nav />
-        <main className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
+        <main className="max-w-3xl mx-auto px-4 sm:px-6 pb-8 sm:pb-16 pt-0">
           {children}
           <SiteFooter />
         </main>

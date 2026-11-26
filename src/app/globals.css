@@ -81,6 +81,323 @@
   animation: splash-fade-in 0.7s ease-out forwards;
 }
 
+/* =====================================================================
+   STORY — apartamento de massinha guiado pelo scroll
+   ===================================================================== */
+
+:root {
+  --story-len: 1100vh;
+  --story-top: 84px;
+  --story-glass: color-mix(in srgb, var(--bg) 62%, transparent);
+  --story-glass-strong: color-mix(in srgb, var(--bg) 82%, transparent);
+}
+
+/* pista: sai do max-w-3xl do <main> sem transform (o pin precisa de position:fixed limpo) */
+.story-track {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: var(--story-len);
+}
+
+.story-stage {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.story-canvas,
+.story-canvas canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.story-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    radial-gradient(85% 70% at 70% 45%, transparent 52%, rgba(245, 239, 230, 0.18) 100%);
+}
+.story-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- painéis ---------- */
+.story-panel {
+  position: absolute;
+  top: var(--story-top);
+  width: min(460px, calc(100vw - 2rem));
+  z-index: 3;
+  isolation: isolate;
+  padding: 1.1rem 0.15rem 1.4rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  color: #241f1a;
+  will-change: transform, opacity;
+  max-height: calc(100dvh - var(--story-top) - 2rem);
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.story-panel--left::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -4rem;
+  left: -5rem;
+  bottom: -5rem;
+  width: min(34rem, 92vw);
+  background: linear-gradient(90deg, #f5efe6 0%, #f5efe6 58%, rgba(245, 239, 230, 0) 100%);
+  pointer-events: none;
+}
+.story-panel--left  { left: clamp(1rem, 5vw, 5rem); }
+.story-panel--right { right: clamp(1rem, 5vw, 5rem); }
+.story-panel--wide  { width: min(560px, calc(100vw - 2rem)); }
+
+.story-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.story-title {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+  color: #2a2926;
+}
+.story-h2 {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  color: #2a2926;
+}
+.story-lead { font-size: 1.02rem; font-weight: 500; margin-bottom: 0.4rem; color: #3a3834; }
+.story-muted { color: #6b6560; font-size: 0.92rem; line-height: 1.5; }
+.story-badge {
+  display: inline-block;
+  background: #2d3d52;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.9rem;
+}
+.story-small { font-size: 0.82rem; margin-top: 0.9rem; }
+.story-accent { color: var(--accent); font-weight: 600; }
+.story-link { color: var(--accent); font-weight: 500; }
+.story-link:hover { text-decoration: underline; }
+
+.story-list { margin-top: 0.7rem; display: grid; gap: 0.4rem; font-size: 0.9rem; line-height: 1.45; color: var(--muted); }
+.story-list li { padding-left: 1rem; position: relative; }
+.story-list li::before { content: ""; position: absolute; left: 0; top: 0.58em; width: 5px; height: 5px; border-radius: 999px; background: var(--accent); }
+.story-list--check li::before { top: 0.5em; width: 7px; height: 7px; border-radius: 2px; }
+.story-list strong { color: var(--text); font-weight: 600; }
+
+.story-quote {
+  margin: 0.9rem 0 0.4rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+  color: #2c2a27;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.story-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.85rem; }
+.story-tags li {
+  font-size: 0.72rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(44, 42, 39, 0.14);
+  color: #5c574f;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.story-ctas { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.1rem; }
+.story-btn {
+  display: inline-flex; align-items: center;
+  padding: 0.62rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid rgba(44, 42, 39, 0.16);
+  font-size: 0.85rem; font-weight: 700;
+  color: #2c2a27;
+  background: rgba(255, 255, 255, 0.55);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.story-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.story-btn--solid { background: #e07d4a; border-color: #e07d4a; color: #fff; }
+
+.story-progress { margin-top: 1rem; display: grid; gap: 0.35rem; }
+.story-progress .story-eyebrow { margin-bottom: 0.1rem; }
+.story-progress__row { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: var(--muted); }
+.story-progress__row > span { min-width: 150px; }
+
+.story-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.4rem; }
+.story-columns .story-list { margin-top: 0.3rem; }
+
+/* corredor: cada porta é uma linha */
+.story-doors { margin-top: 0.6rem; display: grid; gap: 0.45rem; counter-reset: door; }
+.story-doors li {
+  display: grid;
+  grid-template-columns: 7.2rem 1fr;
+  grid-template-areas: "period company" "period role";
+  column-gap: 0.7rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.story-doors li[style*="opacity: 1"] { border-color: var(--border); background: var(--story-glass-strong); }
+.story-doors__period { grid-area: period; font-size: 0.72rem; color: var(--accent); font-weight: 600; letter-spacing: 0.02em; }
+.story-doors__company { grid-area: company; font-weight: 600; font-size: 0.92rem; }
+.story-doors__role { grid-area: role; font-size: 0.8rem; color: var(--muted); }
+
+/* ---------- ecrã do monitor (ato 0) ---------- */
+.story-screen {
+  padding: 0;
+  overflow: visible;
+  border: none;
+  box-shadow: none;
+}
+.story-screen__bar {
+  display: none;
+}
+.story-screen__bar span { width: 9px; height: 9px; border-radius: 999px; background: var(--border); }
+.story-screen__bar span:nth-child(1) { background: #e8705d; }
+.story-screen__bar span:nth-child(2) { background: #e8b95d; }
+.story-screen__bar span:nth-child(3) { background: #6dc98b; }
+.story-screen__bar em { margin-left: auto; font-style: normal; }
+.story-screen__body { padding: 0.2rem 0.1rem 0.4rem; position: relative; }
+.story-screen__body::after { display: none; }
+
+.story-hint {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-top: 1.2rem;
+  font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted);
+}
+.story-hint__mouse {
+  width: 16px; height: 26px; border-radius: 9px;
+  border: 1.5px solid var(--muted);
+  position: relative;
+}
+.story-hint__mouse i {
+  position: absolute; left: 50%; top: 5px;
+  width: 3px; height: 6px; border-radius: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  animation: story-wheel 1.6s ease-in-out infinite;
+}
+@keyframes story-wheel {
+  0%, 100% { transform: translate(-50%, 0); opacity: 1; }
+  60% { transform: translate(-50%, 9px); opacity: 0.2; }
+}
+
+/* ---------- pontos de navegação ---------- */
+.story-dots {
+  position: absolute;
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 0.7rem;
+  z-index: 5;
+}
+.story-dots button {
+  position: relative;
+  width: 12px; height: 12px;
+  border-radius: 999px;
+  border: 1.5px solid #8a8378;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.story-dots button span {
+  position: absolute; right: 22px; top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text);
+  background: var(--story-glass-strong);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.55rem; border-radius: 999px;
+  white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.story-dots button:hover span,
+.story-dots button:focus-visible span { opacity: 1; transform: translateY(-50%) translateX(0); }
+.story-dots button.is-active { background: var(--accent); border-color: var(--accent); transform: scale(1.25); }
+
+/* ---------- mobile ---------- */
+@media (max-width: 768px) {
+  :root { --story-top: 72px; }
+  .story-panel,
+  .story-panel--left,
+  .story-panel--right,
+  .story-panel--wide {
+    top: auto; left: 0.75rem; right: 0.75rem;
+    bottom: 0.75rem;
+    width: auto;
+    max-height: 52dvh;
+    padding: 1rem 1.1rem 1.1rem;
+  }
+  .story-columns { grid-template-columns: 1fr; }
+  .story-doors li { grid-template-columns: 5.6rem 1fr; }
+  .story-progress__row > span { min-width: 120px; }
+  .story-dots { right: 0.5rem; gap: 0.55rem; }
+  .story-dots button span { display: none; }
+}
+
+/* ---------- fallback estático (sem WebGL / reduced motion) ---------- */
+.story-track.story--static { height: auto; }
+.story--static .story-stage { height: auto; overflow: visible; }
+.story--static .story-canvas,
+.story--static .story-vignette,
+.story--static .story-dots,
+.story--static .story-hint { display: none; }
+.story--static .story-panel {
+  position: relative;
+  inset: auto;
+  width: min(720px, calc(100vw - 2rem));
+  max-height: none;
+  margin: 1.5rem auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+.story--static .story-doors li { opacity: 1 !important; transform: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .story-hint__mouse i { animation: none; }
+}
+
 html {
   overflow-x: hidden;
 }

@@ -4,7 +4,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SplashScreen, setSplashSeen, SPLASH_STORAGE_KEY } from "./SplashScreen";
 
-const SPLASH_ENABLED = true;
+/** A história 3D na home substitui a splash; ?intro=1 continua a forçar. */
+const SPLASH_ENABLED = false;
 
 export function SplashGate() {
   const pathname = usePathname();
