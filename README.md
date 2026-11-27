@@ -81,8 +81,7 @@ meu-portfolio/
 │   └── data/                typed content: experience, education, skills, projects, thesis, syllabi
 ├── next.config.js           security headers and the /about redirect
 ├── eslint.config.mjs        ESLint 9 flat config
-├── linkedin_profile_en.md   English profile texts
-├── professional_profile_en.md
+├── docs/                    English profile texts (LinkedIn and professional)
 └── SECURITY.md, CONTRIBUTING.md, AGENTS.md, LICENSE
 ```
 
